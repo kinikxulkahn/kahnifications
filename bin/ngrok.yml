@@ -1,0 +1,9 @@
+tunnels:
+  app:
+    proto: http
+    addr: 3000
+    bind_tls: true
+  pubsub:
+    proto: http
+    addr: 8090
+    bind_tls: true

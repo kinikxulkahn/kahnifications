@@ -97,6 +97,9 @@ dist
 # FuseBox cache
 .fusebox/
 
+# IDE
+*.geany
+
 # DynamoDB Local files
 .dynamodb/
 

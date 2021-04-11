@@ -99,6 +99,7 @@ dist
 
 # IDE
 *.geany
+.vscode/
 
 # DynamoDB Local files
 .dynamodb/

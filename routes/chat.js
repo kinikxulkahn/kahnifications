@@ -7,8 +7,8 @@ const router = express.Router();
 router.get('/', function(req, res, next) {
   const chat = new TwitchChat('kinikxulkahn');
   const connect = async () => {
-    await chat.connect();
-    res.send('respond with a resource');
+    await chat.connect(res);
+    res.render('chat', {});
   };
   connect();
 });

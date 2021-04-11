@@ -9,16 +9,19 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "floating.js": "^2.7.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "obs-websocket-js": "^4.0.2",
     "pug": "^3.0.2",
     "twitch": "^4.5.4",
     "twitch-chat-client": "^4.5.5",
-    "twitch-webhooks": "^4.5.5"
+    "twitch-webhooks": "^4.5.5",
+    "web-push": "^3.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

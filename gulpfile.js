@@ -24,4 +24,9 @@ function css() {
         .pipe(gulp.dest('./public/stylesheets'));
 }
 
-export default gulp.series(css);
+function vendor() {
+    return gulp.src(['./node_modules/floating.js/build/floating.js'])
+    .pipe(gulp.dest('./public/vendor/floating'));
+}
+
+export default gulp.series(css, vendor);

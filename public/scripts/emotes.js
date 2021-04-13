@@ -6,9 +6,9 @@ class Emotes {
     floating({
       content: emote,
       number: 1,
-      duration: 3,
+      duration: Helpers.random(1, 5),
       repeat: 1,
-      size: 3
+      size: [1, 5]
     });
   }
   

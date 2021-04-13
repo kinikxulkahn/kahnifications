@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import Helpers from './lib/Helpers.js';
+import Storage from './lib/Storage.js';
 
 import indexRouter from './routes/index.js';
 import obsRouter from './routes/obs.js';
@@ -12,7 +14,9 @@ import overlaysRouter from './routes/overlays.js';
 import subscribeRouter from './routes/subscribe.js';
 
 const app = express();
-const __dirname = path.dirname(new URL(import.meta.url).pathname).replace(/^\/([A-Z]:)/, "$1");
+const storage = new Storage(true);
+
+console.log('Storage mounted:', storage);
 
 app.set('view engine', 'pug');
 app.use(logger('dev'));
@@ -24,7 +28,7 @@ app.use(function(req, res, next) {
   res.setHeader('Service-Worker-Allowed', '/');
   next();
 });
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(Helpers.dirname, '../public')));
 
 app.use('/', indexRouter);
 app.use('/obs', obsRouter);
